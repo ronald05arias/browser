@@ -53,6 +53,7 @@ class Browser
       'Twitterbot' => 'Twitter URL expander',
       'UnwindFetch' => 'Gnip URL expander',
       'vkShare' => 'VKontake Sharer',
+      'Pinterest' => 'pinterest bot',
 
       # Uptime monitoring
       'check_http' => 'Nagios monitor',

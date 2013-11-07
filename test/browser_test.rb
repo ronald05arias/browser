@@ -49,6 +49,7 @@ class BrowserTest < Test::Unit::TestCase
   GOOGLE_BOT            = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
   MSN_BOT               = "msnbot-media/1.1 (+http://search.msn.com/msnbot.htm)"
   FACEBOOK_BOT          = "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)"
+  PINTEREST_BOT         = "Pinterest/0.1 +http://pinterest.com/"
 
   def setup
     @browser = Browser.new
@@ -683,6 +684,9 @@ class BrowserTest < Test::Unit::TestCase
     assert @browser.bot?
 
     @browser.ua = FACEBOOK_BOT
+    assert @browser.bot?
+
+    @browser.ua = PINTEREST_BOT
     assert @browser.bot?
 
     # Many bots actually report empty ua strings.
