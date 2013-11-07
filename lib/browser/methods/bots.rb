@@ -72,6 +72,8 @@ class Browser
 
     def bot?
       ua =~ BOT_REGEX
+      return false if ua.nil?
+      return true
     end
   end
 end
