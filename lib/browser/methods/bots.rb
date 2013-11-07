@@ -71,9 +71,7 @@ class Browser
     BOT_REGEX = /\b(?:#{BOTS.map { |key, _| Regexp.escape(key) }.join('|')})\b|\A\W*\z/i.freeze
 
     def bot?
-      ua =~ BOT_REGEX
-      return false if ua.nil?
-      return true
+      !(ua =~ BOT_REGEX).nil?
     end
   end
 end

@@ -694,6 +694,6 @@ class BrowserTest < Test::Unit::TestCase
     assert @browser.bot?
 
     @browser.ua = CHROME
-    assert ! @browser.bot?
+    assert !@browser.bot?
   end
 end
